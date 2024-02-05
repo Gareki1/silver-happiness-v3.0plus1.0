@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>TRD - Total Repligger Destruction</title>
+  </head>
+  <body>
+  <h1>Replit sucks</h1>
+  <img src="../static/1570663126377.png">
+    {% for author in authors %}
+      <h1 class="name">{{author.name}}</h1>
+      <span class="nationality">{{author.nationality}}</span><br>
+      {% if author.famouswork is string %}
+          <span class="works">{{ author.famouswork }}</span>
+      {% else %}
+          {% for work in author.famouswork %}
+              <span class="works">{{ work }},</span>
+          {% endfor %}
+      {% endif %}
+    {% endfor %}
+  <div class="footer">
+    <span class="tag">© 2024 A ZOZ Brigade Production</span>
+  </div>
+  </body>
+</html>

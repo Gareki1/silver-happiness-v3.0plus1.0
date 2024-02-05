@@ -1,0 +1,45 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 5% 10% 0 10%;;
+}
+img {
+  border: 1px solid pink;
+  border-radius: 10px;
+  max-height:500px;
+  max-width:500px;
+}
+
+.name {
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0.2rem;
+}
+
+.nationality {
+  font-family: "Times New Roman";
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin: 0.4rem 0;
+}
+
+.works {
+  font-family: "Times New Roman";
+  font-weight: normal;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0.4rem 0;
+}
+
+.footer {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
