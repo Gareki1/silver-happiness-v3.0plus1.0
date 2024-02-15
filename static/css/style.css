@@ -5,10 +5,9 @@ body {
   padding: 5% 10% 0 10%;;
 }
 img {
-  border: 1px solid pink;
-  border-radius: 10px;
-  max-height:500px;
-  max-width:500px;
+  border: 2px solid pink;
+  max-height:256px;
+  max-width:256px;
 }
 
 .name {
@@ -37,6 +36,8 @@ img {
   height: 100px;
   line-height: 100px;
   text-align: center;
+  border: 1px white solid;
+  margin: 1rem;
 }
 .tag {
   display: inline-block;
