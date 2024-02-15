@@ -40,6 +40,10 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 2rem;
+  margin: 0 1rem;
+  background: #1f1f1f;
+  border: 1px solid pink;
 }
 
 .flex {
@@ -54,6 +58,7 @@ img {
   font-size: 1rem;
   width: 25%;
   font-weight: normal;
+  margin-bottom: 1rem;
 }
 
 .name {
@@ -84,7 +89,7 @@ img {
   height: 100px;
   line-height: 100px;
   text-align: center;
-  border: 1px white solid;
+  border: 1px solid pink;
   margin: 1rem;
 }
 .tag {
