@@ -7,19 +7,21 @@
     <title>Silver</title>
   </head>
   <body>
-  <h1>Silver</h1>
-  <img src="../static/1570663126377.png"><br>
+    {% include 'nav.html' %}
+    <!-- <div>
+      <img src="../static/1570663126377.png">
+      <h1>Silver</h1>
+    </div> -->
     <div class="container">
     {% for author in authors %}
       <div class="flex">
       <span class="name ele">{{author.authorname}}</span>
       <span class="book ele">{{author.bookname}}</span>
       <span class="review ele">{{ author.review }}</span>
+      <span class="ele"><a href="/author/{{author['id']}}" type="button" class="btn">Details</a></span>
       </div>
     {% endfor %}
     </div>
-  <div class="footer">
-    <span class="tag">© 2024 A ZOZ Brigade Production</span>
-  </div>
+    {% include 'footer.html' %}
   </body>
 </html>
