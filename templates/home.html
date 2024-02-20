@@ -6,10 +6,10 @@
     <div class="container">
     {% for author in authors %}
       <div class="flex">
-      <span class="name ele">{{author.authorname}}</span>
-      <span class="book ele">{{author.bookname}}</span>
-      <span class="review ele">{{ author.review }}</span>
-      <span class="ele"><a href="/author/{{author['id']}}" type="button" class="btn">Details</a></span>
+      <span class="name ele">{{author.bookname}}</span>
+      <span class="author ele">{{author.authorname}}</span>
+      <span class="blurb ele">{{ author.blurb }}</span>
+      <span class="ele"><a href="/book/{{author['id']}}" type="button" class="btn">Details</a></span>
       </div>
     {% endfor %}
     </div>

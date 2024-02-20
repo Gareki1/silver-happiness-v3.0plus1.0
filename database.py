@@ -13,7 +13,7 @@ def load_authors_from_db():
       authors.append(row._asdict())
     return authors
 
-def load_author_details(id):
+def load_book_details(id):
   with engine.connect() as conn:
     result = conn.execute(text("SELECT * FROM authors WHERE id = :val"), {"val": id})
     rows = result.all()
