@@ -3,7 +3,7 @@ import os
 
 DB_STRING = os.environ['DB_CONN_STR']
 
-engine = create_engine(DB_STRING)
+engine = create_engine(DB_STRING, echo=True)
 
 def load_authors_from_db():
   with engine.connect() as conn:
@@ -21,3 +21,26 @@ def load_book_details(id):
       return None
     else:
       return rows[0]._asdict()
+
+# def add_review_to_db(book_id, data):
+#   with engine.connect() as conn:
+#     query = text("INSERT INTO reviews (book_id, title, content) VALUES (:book_id, :title, :content)")
+#     conn.execute(query,
+#                  book_id = book_id,
+#                  title = data['title'],
+#                  content = data['review_content'])
+def add_review_to_db(book_id, data):
+  with engine.connect() as conn:
+      trans = conn.begin()  # Start a transaction
+      try:
+          query = text("INSERT INTO reviews (book_id, title, content) VALUES (:book_id, :title, :content)")
+          params = {
+              'book_id': book_id,
+              'title': data['title'],
+              'content': data['review_content']
+          }
+          conn.execute(query, params)
+          trans.commit()  # Commit the transaction
+      except:
+          trans.rollback()  # Rollback the transaction on error
+          raise
